@@ -1,0 +1,33 @@
+cd /opt/source/bb.org-overlays/
+
+sudo git pull
+
+cd src/arm
+
+nano bone-eqep2b-00A0.dts
+
+//shit dont work so we do other stuff
+
+cd ~
+
+git clone https://github.com/hurgroup/eQEP_MEEN_Students
+
+cd eQEP_MEEN_Students
+
+sudo cp bone_eqep* /lib/firmware/
+
+sudo su
+
+echo bone_eqep2b > /sys/devices/platform/bone_capemgr/slots
+
+cat /sys/devices/platform/bone_capemgr/slots
+
+cd /sys/devices/platform/ocp
+
+ls
+
+cd 48304000.epwmss
+
+cd 48304180.eqep
+
+ls
