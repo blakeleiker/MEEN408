@@ -9,7 +9,6 @@ int main() {
   cout << "ADC Start" << endl;
   FILE* ADCHandler = NULL;
   const char* ADCVoltage = "/sys/bus/iio/devices/iio:device0/in_voltage5_raw";
-
   char ADCVoltageRead[5] = {0};
   int Voltage;
 
@@ -21,7 +20,6 @@ int main() {
       stringstream ss(ADCVoltageRead);
       ss >> Voltage;
       cout << Voltage << endl;
-      //	printf("%s", ADCVoltageRead);
       usleep(50000);
     }
   }
