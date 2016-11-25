@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.11.22)  25 NOV 2016 00:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.11.22)  25 NOV 2016 16:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -732,60 +732,61 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-) [10
+)
+(../LabCode/Lab04_LedsCPP/leds.cpp) [10
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\kernel@ifnextchar' on input line 200.
+(hyperref)                removing `\kernel@ifnextchar' on input line 171.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 200.
+(hyperref)                removing `\@ifnextchar' on input line 171.
 
-[11
+(../LabCode/Lab05_GPIOCPP/gpio.cpp [11
 
-] [12]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\kernel@ifnextchar' on input line 284.
-
+]) [12]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 284.
+(hyperref)                removing `\kernel@ifnextchar' on input line 175.
 
-[13
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@ifnextchar' on input line 175.
+
+(../LabCode/Lab06_ADCCPP/adc.cpp) [13
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\kernel@ifnextchar' on input line 319.
+(hyperref)                removing `\kernel@ifnextchar' on input line 179.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 319.
+(hyperref)                removing `\@ifnextchar' on input line 179.
 
-[14
+(../LabCode/Lab07_PWMCPP/pwm.cpp [14
 
-] [15]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\kernel@ifnextchar' on input line 384.
-
+]) [15]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 384.
+(hyperref)                removing `\kernel@ifnextchar' on input line 185.
 
-[16
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@ifnextchar' on input line 185.
+
+(../LabCode/Lab08_EQEPCPP/quad.cpp) [16
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\kernel@ifnextchar' on input line 390.
+(hyperref)                removing `\kernel@ifnextchar' on input line 189.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 390.
+(hyperref)                removing `\@ifnextchar' on input line 189.
 
 [17
 
@@ -798,23 +799,23 @@ AED: lastpage setting LastPage
 [20
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 410.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 410.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 200.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 200.
  (./MEEN408_LabManual.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 410.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 410.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 200.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 200.
 Package rerunfilecheck Info: File `MEEN408_LabManual.out' has not changed.
 (rerunfilecheck)             Checksum: 8CF8BE96CDB30BF2A984EFA7DE0E4B33;957.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 410.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 200.
  ) 
 Here is how much of TeX's memory you used:
- 11429 strings out of 493013
- 167488 string characters out of 6139316
- 445825 words of memory out of 5000000
- 14538 multiletter control sequences out of 15000+600000
+ 11478 strings out of 493013
+ 168459 string characters out of 6139316
+ 445931 words of memory out of 5000000
+ 14548 multiletter control sequences out of 15000+600000
  9266 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,12n,76p,275b,1748s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,12n,77p,275b,1734s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmbx5.pfb></usr/share/texmf-dist/fonts/type1/public
@@ -822,10 +823,10 @@ ts/type1/public/amsfonts/cm/cmbx5.pfb></usr/share/texmf-dist/fonts/type1/public
 r17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/sh
 are/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on MEEN408_LabManual.pdf (20 pages, 140691 bytes).
+Output written on MEEN408_LabManual.pdf (20 pages, 142836 bytes).
 PDF statistics:
- 472 PDF objects out of 1000 (max. 8388607)
- 437 compressed objects within 5 object streams
- 249 named destinations out of 1000 (max. 500000)
+ 495 PDF objects out of 1000 (max. 8388607)
+ 460 compressed objects within 5 object streams
+ 268 named destinations out of 1000 (max. 500000)
  121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
