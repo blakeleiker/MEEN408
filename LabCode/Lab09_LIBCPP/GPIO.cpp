@@ -110,7 +110,8 @@ int GPIO::getValue()
 int main()
 {
 	GPIO myGPIO = GPIO(60, "out");
-	int GPIOValue = myGPIO.getValue();
-	std::cout << "Read Value:  " << GPIOValue << std::endl;
+	myGPIO.setValue(1);
+	sleep(2);
+	myGPIO.setValue(0);	
 	return 0;
 }
