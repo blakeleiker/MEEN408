@@ -1,26 +1,4 @@
-#include <unistd.h>
-#include <iostream>
-#include <sstream>
-#include <string>
-#include <fstream>
-
-class GPIO {
- private:
-  // port parameters
-  int gpioPinNumber;
-  std::string direction;
-  int value;
-      // filename strings
-      std::string GPIOFile;
-  std::string GPIOValueFile;
-  std::string GPIODirectionFile;
-  FILE* fileHandle;
- public:
-  GPIO(int gpioPinNumberr, std::string directionn);
-  ~GPIO();
-  void setValue(int Valuee);
-  int getValue();
-};
+#include "GPIO.h"
 
 GPIO::GPIO(int gpioPinNumberr, std::string directionn) {
   // check that inputs are valid
@@ -123,11 +101,3 @@ int GPIO::getValue()
 }
 
 
-int main()
-{
-	GPIO myGPIO = GPIO(60, "out");
-	myGPIO.setValue(1);
-	sleep(2);
-	myGPIO.setValue(0);	
-	return 0;
-}
