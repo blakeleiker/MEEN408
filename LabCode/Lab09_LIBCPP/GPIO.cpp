@@ -30,7 +30,7 @@ GPIO::GPIO(int gpioPinNumberr, std::string directionn) {
   // Export the Pin Number (this will make the Pin directory we can then use)
   // First we see if it is possible to create the directory. If not, quit.
   std::ofstream ofs;
-  ofs.open("/sys/class/gpio/export", std::ios::app);
+  ofs.open(std::string("/sys/class/gpio/export").c_str(), std::ios::app);
   if (!(ofs.is_open())) {
     std::cout << "Cannot export the GPIO Pin\n";
     //throw exception;
@@ -42,7 +42,7 @@ GPIO::GPIO(int gpioPinNumberr, std::string directionn) {
   }
 
   // Set the pin direction
-  ofs.open(GPIODirectionFile, std::ios::trunc);
+  ofs.open(GPIODirectionFile.c_str(), std::ios::trunc);
   if (!(ofs.is_open())) {
     std::cout << "Cannot set the GPIO direction.";
     //throw exception;
@@ -57,7 +57,7 @@ GPIO::GPIO(int gpioPinNumberr, std::string directionn) {
 GPIO::~GPIO()
 {
   std::ofstream ofs;
-  ofs.open("/sys/class/gpio/unexport", std::ios::app);
+  ofs.open(std::string("/sys/class/gpio/unexport").c_str(), std::ios::app);
   if (!(ofs.is_open())) {
     std::cout << "Cannot unexport the GPIO Pin\n";
     //throw exception;
@@ -73,7 +73,7 @@ GPIO::~GPIO()
 void GPIO::setValue(int valuee)
 {
   std::ofstream ofs;
-  ofs.open(GPIOValueFile, std::ios::trunc);
+  ofs.open(GPIOValueFile.c_str(), std::ios::trunc);
   if (!(ofs.is_open())) {
     std::cout << "Cannot set the GPIO Value.";
     //throw exception;
@@ -88,7 +88,7 @@ int GPIO::getValue()
 {
   std::ifstream ifs;
   int value = 0;
-  ifs.open(GPIOValueFile);
+  ifs.open(GPIOValueFile.c_str());
   if (!(ifs.is_open())) {
     std::cout << "Cannot get the GPIO Value.";
     //throw exception;
