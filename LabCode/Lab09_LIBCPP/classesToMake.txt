@@ -1,23 +1,26 @@
 GPIO
-	Gpio.h
-	Gpio.cpp
-
+ Gpio.h
+ Gpio.cpp
+ Info Needed for constructor:
+	gpioNumber	
+	direction
+	initial_value (may not include in the final version)
 ADC
-	Adc.h
-	Adc.cpp
+ Adc.h
+ Adc.cpp
 
 PWM
-	Pwm.h
-	Pwm.cpp
+ Pwm.h
+ Pwm.cpp
 
 Quadrature Encoder
-	QuadratureEncoder.h
-	QuadratureEncoder.cpp
+ QuadratureEncoder.h
+ QuadratureEncoder.cpp
 
 Servomotor
-	Servomotor.h
-	Servomotor.cpp
+ Servomotor.h
+ Servomotor.cpp
 
 DC Motor
-	DCMotor.h
-	DCMotor.cpp
+ DCMotor.h
+ DCMotor.cpp
