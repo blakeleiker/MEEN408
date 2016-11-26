@@ -8,7 +8,8 @@ using namespace std;
 int main() {
   cout << "QuadratureEncoder Start" << endl;
   FILE* QuadHandler = NULL;
-  const char* QuadPositionFile = "/sys/devices/platform/ocp/48304000.epwmss/48304180.eqep/position";
+  const char* QuadPositionFile =
+      "/sys/devices/platform/ocp/48304000.epwmss/48304180.eqep/position";
   char QuadPositionRead[5] = {0};
   int QuadPosition;
 

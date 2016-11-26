@@ -30,7 +30,7 @@ int main() {
   }
 
   // increase the duty cycle from 0% to 100% in 10 seconds smoothly
-  double timeToFullLight = 10; //seconds
+  double timeToFullLight = 10;  // seconds
   int numberOfIncrements = 1000;
   for (int i = 0; i < numberOfIncrements; i++) {
     cout << "count " << i << endl;
@@ -39,7 +39,7 @@ int main() {
       fwrite(setValue, sizeof(char), sizeof(setValue), PWMHandle);
       fclose(PWMHandle);
     }
-   usleep(int(timeToFullLight/numberOfIncrements*1000000));
+    usleep(int(timeToFullLight / numberOfIncrements * 1000000));
   }
 
   // reset duty cycle to 0 and disable
