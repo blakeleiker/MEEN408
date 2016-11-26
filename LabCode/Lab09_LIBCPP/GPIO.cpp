@@ -15,9 +15,9 @@ class GPIO {
   std::string GPIOValueFile;
   std::string GPIODirectionFile;
   FILE* fileHandle;
-
  public:
   GPIO(int gpioPinNumberr, std::string directionn);
+  ~GPIO();
   void setValue(int Valuee);
   int getValue();
 };
@@ -76,6 +76,22 @@ GPIO::GPIO(int gpioPinNumberr, std::string directionn) {
   }
 }
 
+GPIO::~GPIO()
+{
+  std::ofstream ofs;
+  ofs.open("/sys/class/gpio/unexport", std::ios::app);
+  if (!(ofs.is_open())) {
+    std::cout << "Cannot unexport the GPIO Pin\n";
+    //throw exception;
+  }
+  else{
+    // If connecting to the export file works, we export the pin number.
+    ofs << gpioPinNumber;  // write pin number to export file
+    ofs.close();           // and close the file
+  }
+
+	
+}
 void GPIO::setValue(int valuee)
 {
   std::ofstream ofs;
