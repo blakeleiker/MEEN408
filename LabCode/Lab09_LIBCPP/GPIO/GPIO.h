@@ -2,10 +2,10 @@
 #define GPIO_H
 
 #include <unistd.h>
+#include <fstream>
 #include <iostream>
 #include <sstream>
 #include <string>
-#include <fstream>
 
 class GPIO {
  private:
@@ -13,11 +13,12 @@ class GPIO {
   int gpioPinNumber;
   std::string direction;
   int value;
-      // filename strings
-      std::string GPIOFile;
+  // filename strings
+  std::string GPIOFile;
   std::string GPIOValueFile;
   std::string GPIODirectionFile;
   FILE* fileHandle;
+
  public:
   GPIO(int gpioPinNumberr, std::string directionn);
   ~GPIO();
