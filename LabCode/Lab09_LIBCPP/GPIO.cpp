@@ -78,7 +78,7 @@ GPIO::GPIO(int gpioPinNumberr, std::string directionn) {
 
 void GPIO::setValue(int valuee)
 {
-  std::ofstream ofs.
+  std::ofstream ofs;
   ofs.open(GPIOValueFile, std::ios::trunc);
   if (!(ofs.is_open())) {
     std::cout << "Cannot set the GPIO Value.";
@@ -100,7 +100,7 @@ int GPIO::getValue()
     //throw exception;
   }
   else{
-    ifs >> valuee;
+    ifs >> value;
     ofs.close();     
   }
   return value;
@@ -110,7 +110,7 @@ int GPIO::getValue()
 int main()
 {
 	GPIO myGPIO = GPIO(60, "out");
-	int GPIOValue = myGPIO.getValue;
-	cout << "Read Value:  " << GPIOValue;
+	int GPIOValue = myGPIO.getValue();
+	std::cout << "Read Value:  " << GPIOValue << std::endl;
 	return 0;
 }
