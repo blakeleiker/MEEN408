@@ -95,13 +95,13 @@ int GPIO::getValue()
   std::ifstream ifs;
   int value = 0;
   ifs.open(GPIOValueFile);
-  if (!(ofs.is_open())) {
+  if (!(ifs.is_open())) {
     std::cout << "Cannot get the GPIO Value.";
     //throw exception;
   }
   else{
     ifs >> value;
-    ofs.close();     
+    ifs.close();     
   }
   return value;
 }
