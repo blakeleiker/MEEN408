@@ -18,9 +18,9 @@ ADC::ADC(int ADCPinNumberr) {
   ss.str(std::string());      //
 }
 
-int ADC::readVoltage() {
+double ADC::readVoltage() {
   double maxADCVoltage = 1.8;  // maximum allowed voltage -- DO NOTE EXCEED
-  double minADCVoltage = 0;    // minimum measureable voltage (lowest output)
+  double minADCVoltage = 0.0;    // minimum measureable voltage (lowest output)
   int maxRaw = 4095;           // maximum output from ADC
   int minRaw = 0;              // minimum output from ADC
   std::ifstream ifs;
@@ -34,8 +34,21 @@ int ADC::readVoltage() {
     ifs >> rawADC;
   }
   ifs.close();
-  double ADCVoltage =
-      ((maxADCVoltage - minADCVoltage) / (maxRaw - minRaw)) * rawADC +
-      minADCVoltage;
+  ADCVoltage = ((maxADCVoltage - minADCVoltage) / (maxRaw - minRaw)) * rawADC +  minADCVoltage;
   return ADCVoltage;
 }
+
+int ADC::readRaw() {
+  std::ifstream ifs;
+  int rawADC = 0;
+  ifs.open(ADCVoltageFile.c_str());
+  if (!(ifs.is_open())) {
+    std::cout << "Cannot get the ADC Voltage.\n";
+    // throw exception;
+  } else {
+    ifs >> rawADC;
+  }
+  ifs.close();
+  return rawADC;
+}
+

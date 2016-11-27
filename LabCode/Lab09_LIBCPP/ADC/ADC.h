@@ -7,10 +7,10 @@
 #include <sstream>
 #include <string>
 
-class PWM {
+class ADC {
  private:
   // ADC parameters
-  int ADCVoltage;
+  double ADCVoltage;
   int ADCPinNumber;
   // filename strings
   std::string ADCDeviceFile;
@@ -18,7 +18,8 @@ class PWM {
 
  public:
   ADC(int ADCPinNumberr);
-  int readVoltage();
+  double readVoltage();
+  int readRaw();
 };
 
 #endif
