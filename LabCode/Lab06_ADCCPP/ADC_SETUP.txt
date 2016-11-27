@@ -1,0 +1,10 @@
+ADC: Analog to Digital Converter
+
+//Check for ADC dtbo file
+ls /lib/firmware
+
+//Add BB-ADC to Available
+sudo su
+echo BB-ADC > /sys/devices/platform/bone_capemgr/slots
+
+//You now have ADC in /sys/bus/iio/devices/iio:device0
