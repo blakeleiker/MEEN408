@@ -1,5 +1,5 @@
-#ifndef PWM_H
-#define PWM_H
+#ifndef ADC_H
+#define ADC_H
 
 #include <unistd.h>
 #include <fstream>
@@ -10,8 +10,9 @@
 class PWM {
  private:
   // PWM parameters
-  int Period;
-  int DutyCycle;
+  int ADCVoltage;
+  int ADCNumber
+  std::string ADCVoltageFile
   int PWMNumber;
   std::string Polarity;
   int Enabled;
