@@ -1,0 +1,23 @@
+EQEP0
+    "P9.42.1",	// EQEP0A_in
+		"P9.27",		// EQEP0B_in
+		"P9.41",		// EQEP0_index
+		"P9.25",		// EQEP0_strobe
+
+EQEP1
+    "P8.35",		// EQEP1A_in
+		"P8.33",		// EQEP1B_in
+		"P8.31",		// EQEP1_index
+		"P8.32",		// EQEP1_strobe
+    
+EQEP2
+		"P8.41",		// EQEP2A_in
+		"P8.42",		// EQEP2B_in
+		"P8.39",		// EQEP2_index
+		"P8.40",		// EQEP2_strobe
+    
+EQEP2b
+    "P8.12",		// EQEP2A_in
+		"P8.11",		// EQEP2B_in
+		"P8.16",		// EQEP2_index
+		"P8.15",		// EQEP2_strobe
