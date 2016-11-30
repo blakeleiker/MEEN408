@@ -27,21 +27,9 @@ PWM::PWM(int PWMNumberr, int Periodd, int DutyCyclee) {
   PWMEnableFile = ss.str();                                 //
   ss.clear();                                               //
   ss.str(std::string());                                    //
-  std::string PWMSlots =  "/sys/devices/platform/bone_capemgr/slots";
-  
-  // Check if the PWM device is in slots
-  std::ofstream ofs;
-  ofs.open(PWMSlots.c_str(),
-           std::ios::app);
-  if (!(ofs.is_open())) {
-    std::cout << "Cannot export the PWM Device to Slots\n";
-    // throw exception;
-  } else {
-    ofs << "BB-PWM2";  // write pin number to export file
-  }
-  ofs.close();  // and close the file
- 
+
   // Export the PWM  Number (this will make the pwm directory we can then use)
+  std::ofstream ofs;
   ofs.open(std::string("/sys/class/pwm/pwmchip0/export").c_str(),
            std::ios::app);
   if (!(ofs.is_open())) {
